@@ -113,7 +113,7 @@ lib.mapAttrs (_: func: lib.makeOverridable func) {
       netrc_file =
         if (pathParts != [ ])
         then (head pathParts).path
-        else "";
+        else "/etc/nix/netrc";
     in
     runCommand file
       {
